@@ -52,7 +52,7 @@ export default function TripDetailsPage() {
 
   const bookingMutation = useMutation({
     mutationFn: async (tripId: string) => {
-      const response = await fetch(`http://localhost:5000/api/trips?userId=${userId}`, {
+      const response = await fetch(`https://mapminds-backend-sandy.vercel.app/api/trips?userId=${userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

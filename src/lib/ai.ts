@@ -1,7 +1,7 @@
 import { api } from './api';
 
 export const fetchRecommendations = async (userId: string): Promise<{ recommendations: string }> => {
-  const { data } = await api.get(`http://localhost:5000/api/ai/recommendations?userId=${userId}`);
+  const { data } = await api.get(`https://mapminds-backend-sandy.vercel.app/api/ai/recommendations?userId=${userId}`);
   return data;
 };
 
@@ -18,7 +18,7 @@ export async function sendChatMessage(payload: {
   message: string;
   userMessageId: string;
 }): Promise<string> {
-  const res = await fetch('http://localhost:5000/api/ai/chat', {
+  const res = await fetch('https://mapminds-backend-sandy.vercel.app/api/ai/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     credentials: 'include',
@@ -38,7 +38,7 @@ export async function streamChat(
   onChunk: (chunk: string) => void,
   signal?: AbortSignal
 ) {
-  const res = await fetch('http://localhost:5000/api/ai/chat', {
+  const res = await fetch('https://mapminds-backend-sandy.vercel.app/api/ai/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     credentials: 'include',
