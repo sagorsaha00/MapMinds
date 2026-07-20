@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { GoogleLogin, CredentialResponse } from '@react-oauth/google';
@@ -16,9 +16,12 @@ export default function RegisterPage() {
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const userData = localStorage.getItem('MapMinds_user');
-  if (userData) {
-    router.push('/');
-  }
+  useEffect(() => {
+    const userData = localStorage.getItem('MapMinds_user');
+    if (userData) {
+      router.push('/');
+    }
+  }, [router]);
   const validate = () => {
     if (!name.trim()) return 'Name is required';
     if (!email.trim()) return 'Email is required';
