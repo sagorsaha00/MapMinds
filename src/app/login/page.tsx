@@ -14,6 +14,11 @@ export default function LoginPage() {
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const userData = localStorage.getItem('MapMinds_user');
+  if (userData) {
+    router.push('/');
+  }
+
   const validate = () => {
     if (!email.trim()) return 'Email is required';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return 'Enter a valid email address';
