@@ -94,7 +94,7 @@ export default function Navbar() {
 
       {/* মোবাইল রেসপন্সিভ ড্রপডাউন মেনু (চরম রাউন্ডেড কোণা সহ) */}
       {isOpen && (
-        <div className="md:hidden border-t border-sand/40 bg-white/95 backdrop-blur-2xl rounded-[2rem] absolute top-[74px] left-0 right-0 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="md:hidden border-t border-sand/40 bg-black/95 backdrop-blur-2xl rounded-[2rem] absolute top-[74px] left-0 right-0 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-4 duration-300">
           <div className="p-5 flex flex-col gap-1">
             {links.map((link) => (
               <Link
