@@ -15,7 +15,7 @@ export default function RegisterPage() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const userData = localStorage.getItem('MapMinds_user');
+
   useEffect(() => {
     const userData = localStorage.getItem('MapMinds_user');
     if (userData) {
