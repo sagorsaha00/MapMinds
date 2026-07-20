@@ -31,7 +31,10 @@ export default function TripCard({ trip }: { trip: Trip }) {
             ⭐ {trip.rating.toFixed(1)}
           </div>
         </div>
-        <Link href={`/trips/${trip._id}`} className="btn-primary text-center mt-4 w-full">
+        <Link
+          href={`/trips/${trip._id}`}
+          className="block w-full bg-neutral-950 hover:bg-neutral-850 text-white text-xs font-bold uppercase tracking-widest text-center rounded-xl py-3.5 transition-all duration-250 shadow-xs hover:shadow-md"
+        >
           View Details
         </Link>
       </div>
