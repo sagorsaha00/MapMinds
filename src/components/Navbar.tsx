@@ -78,7 +78,7 @@ export default function Navbar() {
 
         {/* মোবাইল হ্যামবার্গার মেনু বাটন */}
         <button
-          className="md:hidden relative w-9 h-9 flex flex-col items-center justify-center gap-1.5 bg-neutral-100/60 rounded-full transition-colors"
+          className="md:hidden relative w-9 h-9 flex flex-col items-center justify-center gap-1.5 bg-black-100/30 rounded-full transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -94,7 +94,7 @@ export default function Navbar() {
 
       {/* মোবাইল রেসপন্সিভ ড্রপডাউন মেনু (চরম রাউন্ডেড কোণা সহ) */}
       {isOpen && (
-        <div className="md:hidden border-t border-sand/40 bg-black/95 backdrop-blur-2xl rounded-[2rem] absolute top-[74px] left-0 right-0 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="md:hidden border-t border-sand/40 bg-white/95 backdrop-blur-2xl rounded-[2rem] absolute top-[74px] left-0 right-0 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-4 duration-300">
           <div className="p-5 flex flex-col gap-1">
             {links.map((link) => (
               <Link
