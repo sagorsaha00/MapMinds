@@ -2,19 +2,19 @@ import React from 'react';
 
 const testimonials = [
   {
-    name: 'Ava Thompson',
-    role: 'Solo Traveler',
-    quote: 'The AI assistant helped me rebuild my entire Portugal itinerary in minutes when my flight changed. Genuinely useful, not gimmicky.',
+    name: 'আরিফ আহমেদ',
+    role: 'সোলো ট্রাভেলার',
+    quote: 'হঠাৎ করে ফ্লাইট আর বাসের শিডিউল চেঞ্জ হওয়ায় বিপদে পড়েছিলাম। MapMinds-এর এআই অ্যাসিস্ট্যান্ট মাত্র কয়েক মিনিটে আমার পুরো সাজেক ভ্যালির ট্যুর প্ল্যান নতুন করে সাজিয়ে দিয়েছে। দারুণ কাজের একটা টুল!',
   },
   {
-    name: 'Marcus Chen',
-    role: 'Family Trip Planner',
-    quote: 'Recommendations actually matched what my family likes — beaches, short transfers, kid-friendly stops. Saved hours of research.',
+    name: 'রাইসা তানজিম',
+    role: 'ফ্যামিলি ট্রিপ প্ল্যানার',
+    quote: 'পারিবারিক ভ্রমণের জন্য পারফেক্ট! ছোট বাচ্চা আর বয়স্কদের কথা মাথায় রেখে কম জার্নি, সমুদ্র সৈকত আর কিডস-ফ্রেন্ডলি স্পটগুলো যেভাবে সাজেস্ট করেছে, তাতে আমার ঘণ্টার পর ঘণ্টা রিসার্চ করার সময় বেঁচে গেছে।',
   },
   {
-    name: 'Priya Nair',
-    role: 'Adventure Seeker',
-    quote: 'I told it I wanted trekking and wildlife, and it surfaced trips I hadn’t even considered. Booked one within a week.',
+    name: 'সাকিব হাসান',
+    role: 'অ্যাডভেঞ্চার সন্ধানী',
+    quote: 'আমি শুধু বলেছিলাম পাহাড় ট্র্যাকিং আর বন্যপ্রাণী পছন্দ করি। এআই আমাকে বান্দরবান আর রেমা-কালেঙ্গার এমন কিছু ট্রিপ প্ল্যান দেখিয়েছে যা আমি ভাবিওনি। দেখে সাথে সাথেই পরের সপ্তাহের জন্য ব্যাকপ্যাক গুছিয়ে ফেলেছি!',
   },
 ];
 
@@ -23,18 +23,18 @@ export default function Testimonials() {
     <section className="max-w-[1400px] mx-auto px-4 md:px-10 py-20 font-body antialiased bg-stone/5">
       {/* হেডার সেকশন */}
       <div className="text-center max-w-2xl mx-auto mb-16">
-        <span className="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-black text-white mb-4">
-          Reviews
+        <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-black text-white mb-4">
+          রিভিউসমূহ
         </span>
         <h2 className="font-display text-3xl md:text-4xl font-semibold text-neutral-900 tracking-tighter mb-3">
-          What travelers say
+          ভ্রমণকারীদের অভিজ্ঞতা
         </h2>
         <p className="text-neutral-500 font-medium text-sm md:text-base">
-          Real feedback from people who planned their trips with MapMinds.
+          যাঁরা MapMinds ব্যবহার করে বাংলাদেশে তাঁদের ভ্রমণের পরিকল্পনা করেছেন, তাঁদের বাস্তব মতামত।
         </p>
       </div>
 
-      {/* টেস্টমোনিয়াল গ্রিড */}
+      {/* টেস্টমোনিয়াল গ্রিড */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((t) => (
           <div
@@ -52,10 +52,11 @@ export default function Testimonials() {
 
             {/* ইউজার প্রোফাইল ইনফো */}
             <div className="flex items-center gap-4 pt-4 border-t border-neutral-100">
-              {/* DaisyUI Avatar উইথ ইনিশিয়ালস */}
+              {/* DaisyUI Avatar উইথ ইনিশিয়ালস */}
               <div className="avatar placeholder">
-                <div className="bg-neutral-900 text-white w-10 h-10 rounded-xl font-bold uppercase tracking-wider text-xs">
-                  <span>{t.name.split(' ').map(n => n[0]).join('')}</span>
+                <div className="bg-neutral-900 text-white w-10 h-10 rounded-xl font-bold uppercase tracking-wider text-xs flex items-center justify-center">
+                  {/* বাংলা নামের প্রথম অক্ষর দেখানোর জন্য */}
+                  <span>{t.name.split(' ')[0][0]}</span>
                 </div>
               </div>
 
